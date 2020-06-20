@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+</head>
+<style type="text/css">
+	body {
+		background: black;
+	}
+	h1 {
+		color: #fff
+	}
+	#num2 {
+		margin-top: 20px;
+	}
+	.calc {
+		text-align: center;
+		font-size: 20px;
+		width: 485px;
+	}
+	#num1 {
+		margin-top: 50px;
+	}
+	.button {
+		margin-top: 30px;
+		font-size: 15px;
+		height: 35px;
+	}
+	hr {
+		margin-top: 20px
+	}
+</style>
+<script type="text/javascript">
+	let a = 'результат: ';
+	function plus() {
+		let number1 = parseInt(num1.value)
+		let number2 = parseInt(num2.value)
+		let res = number1 + number2;
+		ans.innerHTML = a + res;
+	}
+	function minus() {
+		let number1 = parseInt(num1.value)
+		let number2 = parseInt(num2.value)
+		let res = number1 - number2;
+		ans.innerHTML = a + res;
+	}
+	function umnozhit() {
+		let number1 = parseInt(num1.value)
+		let number2 = parseInt(num2.value)
+		let res = number1 * number2;
+		ans.innerHTML = a + res;
+	}
+	function razdelit() {
+		let number1 = parseInt(num1.value)
+		let number2 = parseInt(num2.value)
+		let res = number1 / number2;
+		ans.innerHTML = a + res;
+		if (number2 == 0) {
+			ans.innerHTML = 'я тебя на ноль поделю'
+		}
+	}
+	function stepen() {
+		let number1 = parseInt(num1.value)
+		let number2 = parseInt(num2.value)
+		let res = number1 ** number2;
+		ans.innerHTML = a + res;
+	}
+</script>
+<body>
+	<h1 align="center">CALCULATOR-ONLINE</h1>
+	<p align="center">
+	<input type="input" name="input1" class="calc" value="" id="num1"> <br>
+	<input type="input" name="input2" class="calc" value="" id="num2"> <br>
+	<button class="button" onclick="plus()">СЛОЖИТЬ</button> <button class="button" onclick="minus()">ВЫЧЕСТЬ</button> <button class="button" onclick="umnozhit()">УМНОЖИТЬ</button> <button class="button" onclick="razdelit()">РАЗДЕЛИТЬ</button> <button class="button" onclick="stepen()">СТЕПЕНЬ</button> </p>
+	<hr>
+	<h1 id="ans">результат: </h1>
+</body>
+</html>
